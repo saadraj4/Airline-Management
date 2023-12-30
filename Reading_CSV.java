@@ -1,9 +1,12 @@
 import java.util.*;
 import java.io.*;
+
 public class Reading_CSV {
+
+    // Reads airport data from a CSV file and returns a list of Airport objects
     static List<Airport> readAirportsFromCsv(String airportsCsv) {
         List<Airport> airports = new ArrayList<>();
-        String path = "./cases_v2/airports/"+airportsCsv+".csv";
+        String path = "./cases_v2/airports/" + airportsCsv + ".csv";
 
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {
             String line;
@@ -26,9 +29,10 @@ public class Reading_CSV {
         return airports;
     }
 
+    // Reads direction data from a CSV file and returns a list of Direction objects
     static List<Direction> readDirectionsFromCsv(String directionsCsv) {
         List<Direction> directions = new ArrayList<>();
-        String path = "./cases_v2/directions/"+directionsCsv+".csv";
+        String path = "./cases_v2/directions/" + directionsCsv + ".csv";
 
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {
             String line;
@@ -48,9 +52,10 @@ public class Reading_CSV {
         return directions;
     }
 
+    // Reads weather data from a CSV file and returns a list of Weather objects
     static List<Weather> readWeatherFromCsv(String weatherCsv) {
         List<Weather> weatherList = new ArrayList<>();
-        String path = "./cases_v2/"+weatherCsv+".csv";
+        String path = "./cases_v2/" + weatherCsv + ".csv";
 
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {
             String line;
@@ -71,10 +76,10 @@ public class Reading_CSV {
         return weatherList;
     }
 
-    // Inside the Main class
 
+    // Reads mission input data from a CSV file and returns a list of MissionInput objects
     static List<MissionInput> readMissionInputs(String missionsIn) {
-        String path = "./cases_v2/missions/" + missionsIn+".in";  // Corrected path
+        String path = "./cases_v2/missions/" + missionsIn + ".in";  // Corrected path
         List<MissionInput> missionInputs = new ArrayList<>();
 
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {

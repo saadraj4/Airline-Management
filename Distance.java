@@ -1,4 +1,7 @@
 public class Distance {
+
+    // Calculates the great-circle distance between two airports using the Haversine formula.
+   
     static double calculateDistance(Airport airport1, Airport airport2) {
         // Implementation of Haversine formula
         double lat1 = Math.toRadians(airport1.getLatitude());
@@ -25,7 +28,8 @@ public class Distance {
         return distance;
     }
 
-    // Helper method to determine the subsidiary based on the distance
+    // Helper method to determine the lounge subsidiary based on the distance.
+    
     static LoungeSubsidiary determineSubsidiary(double distance) {
         if (distance <= 175) {
             return LoungeSubsidiary.LOUNGE_TURKEY;
@@ -39,7 +43,9 @@ public class Distance {
         }
     }
 
-    // Helper method to calculate flight duration based on the subsidiary and distance
+    
+    // Helper method to calculate flight duration based on the lounge subsidiary and distance.
+   
     static double calculateFlightDuration(LoungeSubsidiary subsidiary, double distance) {
         if (subsidiary != null) {
             switch (subsidiary) {
@@ -61,7 +67,8 @@ public class Distance {
         }
     }
 
-    // Helper method to calculate flight duration for Carreidas 160
+    //  Helper method to calculate flight duration for Carreidas 160.
+    
     private static double calculateCarreidas160FlightDuration(double distance) {
         if (distance <= 175) {
             return 6.0;
@@ -72,7 +79,8 @@ public class Distance {
         }
     }
 
-    // Helper method to calculate flight duration for Orion III
+    // Helper method to calculate flight duration for Orion III.
+    
     private static double calculateOrionIIIFlightDuration(double distance) {
         if (distance <= 1500) {
             return 6.0;
@@ -83,7 +91,8 @@ public class Distance {
         }
     }
 
-    // Helper method to calculate flight duration for Skyfleet S570
+    // Helper method to calculate flight duration for Skyfleet S570.
+ 
     private static double calculateSkyfleetS570FlightDuration(double distance) {
         if (distance <= 500) {
             return 6.0;
@@ -94,7 +103,8 @@ public class Distance {
         }
     }
 
-    // Helper method to calculate flight duration for T-16 Skyhopper
+    // Helper method to calculate flight duration for T-16 Skyhopper.
+    
     private static double calculateT16SkyhopperFlightDuration(double distance) {
         if (distance <= 2500) {
             return 6.0;
@@ -104,5 +114,4 @@ public class Distance {
             return 18.0;
         }
     }
-
 }

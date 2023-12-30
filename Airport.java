@@ -13,26 +13,37 @@ public class Airport {
         this.parkingCost = parkingCost;
     }
 
+    // Gets the code assigned to the airport.
+    
     public String getAirportCode() {
         return airportCode;
     }
-
+    // Gets the name of the airport.
+     
     public String getAirfieldName() {
         return airfieldName;
     }
 
+    // Gets the latitude coordinate of the airport.
+    
     public double getLatitude() {
         return latitude;
     }
 
+    // Gets the longitude coordinate of the airport.
+    
     public double getLongitude() {
         return longitude;
     }
 
+    // Gets the cost of parking at the airport.
+    
     public double getParkingCost() {
         return parkingCost;
     }
 
+//    Overrides the default toString method to provide a string representation of the Airport object.
+     
     @Override
     public String toString() {
         return "Airport{" +
